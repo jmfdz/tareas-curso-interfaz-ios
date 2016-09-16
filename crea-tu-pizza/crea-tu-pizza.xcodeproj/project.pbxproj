@@ -12,6 +12,12 @@
 		8C22D3371D8B23E00056CC40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C22D3351D8B23E00056CC40 /* Main.storyboard */; };
 		8C22D3391D8B23E00056CC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C22D3381D8B23E00056CC40 /* Assets.xcassets */; };
 		8C22D33C1D8B23E00056CC40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C22D33A1D8B23E00056CC40 /* LaunchScreen.storyboard */; };
+		8C97FABA1D8C81D500BE4FC8 /* PedidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C97FAB91D8C81D500BE4FC8 /* PedidoViewController.swift */; };
+		8CFF006C1D8C5BF8009B75B1 /* TamañoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF006B1D8C5BF8009B75B1 /* TamañoTableViewController.swift */; };
+		8CFF006E1D8C6A1E009B75B1 /* MasaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF006D1D8C6A1E009B75B1 /* MasaTableViewController.swift */; };
+		8CFF00701D8C6D5A009B75B1 /* QuesoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF006F1D8C6D5A009B75B1 /* QuesoTableViewController.swift */; };
+		8CFF00721D8C6D74009B75B1 /* IngredientesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF00711D8C6D74009B75B1 /* IngredientesTableViewController.swift */; };
+		8CFF00741D8C6EA1009B75B1 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF00731D8C6EA1009B75B1 /* Pizza.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		8C22D3381D8B23E00056CC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C22D33B1D8B23E00056CC40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C22D33D1D8B23E00056CC40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C97FAB91D8C81D500BE4FC8 /* PedidoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoViewController.swift; sourceTree = "<group>"; };
+		8CFF006B1D8C5BF8009B75B1 /* TamañoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TamañoTableViewController.swift"; sourceTree = "<group>"; };
+		8CFF006D1D8C6A1E009B75B1 /* MasaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasaTableViewController.swift; sourceTree = "<group>"; };
+		8CFF006F1D8C6D5A009B75B1 /* QuesoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesoTableViewController.swift; sourceTree = "<group>"; };
+		8CFF00711D8C6D74009B75B1 /* IngredientesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesTableViewController.swift; sourceTree = "<group>"; };
+		8CFF00731D8C6EA1009B75B1 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				8C22D3381D8B23E00056CC40 /* Assets.xcassets */,
 				8C22D33A1D8B23E00056CC40 /* LaunchScreen.storyboard */,
 				8C22D33D1D8B23E00056CC40 /* Info.plist */,
+				8CFF006B1D8C5BF8009B75B1 /* TamañoTableViewController.swift */,
+				8CFF006D1D8C6A1E009B75B1 /* MasaTableViewController.swift */,
+				8CFF006F1D8C6D5A009B75B1 /* QuesoTableViewController.swift */,
+				8CFF00711D8C6D74009B75B1 /* IngredientesTableViewController.swift */,
+				8CFF00731D8C6EA1009B75B1 /* Pizza.swift */,
+				8C97FAB91D8C81D500BE4FC8 /* PedidoViewController.swift */,
 			);
 			path = "crea-tu-pizza";
 			sourceTree = "<group>";
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFF00741D8C6EA1009B75B1 /* Pizza.swift in Sources */,
+				8C97FABA1D8C81D500BE4FC8 /* PedidoViewController.swift in Sources */,
+				8CFF00721D8C6D74009B75B1 /* IngredientesTableViewController.swift in Sources */,
+				8CFF00701D8C6D5A009B75B1 /* QuesoTableViewController.swift in Sources */,
 				8C22D3341D8B23E00056CC40 /* ViewController.swift in Sources */,
+				8CFF006E1D8C6A1E009B75B1 /* MasaTableViewController.swift in Sources */,
 				8C22D3321D8B23E00056CC40 /* AppDelegate.swift in Sources */,
+				8CFF006C1D8C5BF8009B75B1 /* TamañoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +312,7 @@
 				8C22D3421D8B23E00056CC40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
