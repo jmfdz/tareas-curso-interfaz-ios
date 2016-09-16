@@ -15,19 +15,38 @@ class PedidoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tamaño.text = pizza!.tamaños[ pizza!.tamañoSeleccionado! ]
-        masa.text = pizza!.masas[ pizza!.masaSeleccionada! ]
-        queso.text = pizza!.quesos[ pizza!.quesoSeleccionado! ]
+        if let tam = pizza!.tamañoSeleccionado {
+            tamaño.text = pizza!.tamaños[ tam ]
+        }else {
+            tamaño.text = "Sin tamaño"
+        }
         
-        var ings = ""
+        if let mas = pizza!.masaSeleccionada {
+            masa.text = pizza!.masas[ mas ]
+        }else{
+            masa.text = "Sin masa"
+        }
+        
+        if let que = pizza!.quesoSeleccionado {
+            queso.text = pizza!.quesos[ que ]
+        }else {
+            queso.text = "Sin queso"
+        }
+        
+        var ings = "Sin ingredientes"
+        var i = 0        
         for value in pizza!.ingredientesSeleccionados {
-            ings += " " + pizza!.ingredientes[value]
+            if i == 0 {
+                ings = pizza!.ingredientes[value]
+            } else {
+                ings += ", " + pizza!.ingredientes[value]
+            }
+            i += 1
         }
         
         ingredientes.text = ings
         
         
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,10 +73,35 @@ class PedidoViewController: UIViewController {
 
     @IBAction func realizarPedido(sender: AnyObject) {
     
+        var enviar = true
         
-        let alert = UIAlertController(title: "Pedido realizado", message: "¡El pedido se ha enviado correctamente a la cocina!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        if pizza!.tamañoSeleccionado == nil {
+            enviar = false
+        }
+        if pizza!.masaSeleccionada == nil {
+            enviar = false
+        }
+        if pizza!.quesoSeleccionado == nil {
+            enviar = false
+        }
+        
+        if pizza!.ingredientesSeleccionados.count < 1 || pizza!.ingredientesSeleccionados.count > 5 {
+            enviar = false
+        }
+        
+        if enviar {
+        
+            let alert = UIAlertController(title: "Pedido realizado", message: "¡El pedido se ha enviado correctamente a la cocina!", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style:  UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }else {
+        
+            let alert = UIAlertController(title: "Pedido incompleto", message: "Es necesario seleccionar tamaño, masa, tipo de queso e ingredientes de 1 a 5. Vuelve atrás e completa tu pedido.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style:  UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
         
     }
 }

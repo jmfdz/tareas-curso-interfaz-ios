@@ -46,10 +46,15 @@ class IngredientesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         pizza!.ingredientesSeleccionados.append( indexPath.row )
+        print( indexPath.row)
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        pizza!.ingredientesSeleccionados.removeAtIndex( indexPath.row )
+        
+        if let indice = pizza!.ingredientesSeleccionados.indexOf(indexPath.row) {
+            pizza!.ingredientesSeleccionados.removeAtIndex( indice )
+        }
+        
     }
 
     /*
