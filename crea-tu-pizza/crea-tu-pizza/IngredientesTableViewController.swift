@@ -29,30 +29,30 @@ class IngredientesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pizza!.ingredientes.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        cell.textLabel!.text = pizza!.ingredientes[ indexPath.row ]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel!.text = pizza!.ingredientes[ (indexPath as NSIndexPath).row ]
         return cell
     }
  
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        pizza!.ingredientesSeleccionados.append( indexPath.row )
-        print( indexPath.row)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        pizza!.ingredientesSeleccionados.append( (indexPath as NSIndexPath).row )
+        print( (indexPath as NSIndexPath).row)
     }
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
-        if let indice = pizza!.ingredientesSeleccionados.indexOf(indexPath.row) {
-            pizza!.ingredientesSeleccionados.removeAtIndex( indice )
+        if let indice = pizza!.ingredientesSeleccionados.index(of: (indexPath as NSIndexPath).row) {
+            pizza!.ingredientesSeleccionados.remove( at: indice )
         }
         
     }
@@ -96,10 +96,10 @@ class IngredientesTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let destino = segue.destinationViewController as! PedidoViewController
+        let destino = segue.destination as! PedidoViewController
         destino.pizza = pizza
     }
  

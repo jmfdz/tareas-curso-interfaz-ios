@@ -71,7 +71,7 @@ class PedidoViewController: UIViewController {
     }
     */
 
-    @IBAction func realizarPedido(sender: AnyObject) {
+    @IBAction func realizarPedido(_ sender: AnyObject) {
     
         var enviar = true
         
@@ -91,15 +91,15 @@ class PedidoViewController: UIViewController {
         
         if enviar {
         
-            let alert = UIAlertController(title: "Pedido realizado", message: "¡El pedido se ha enviado correctamente a la cocina!", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style:  UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Pedido realizado", message: "¡El pedido se ha enviado correctamente a la cocina!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style:  UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             
         }else {
         
-            let alert = UIAlertController(title: "Pedido incompleto", message: "Es necesario seleccionar tamaño, masa, tipo de queso e ingredientes de 1 a 5. Vuelve atrás e completa tu pedido.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style:  UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Pedido incompleto", message: "Es necesario seleccionar tamaño, masa, tipo de queso e ingredientes de 1 a 5. Vuelve atrás e completa tu pedido.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style:  UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             
         }
         

@@ -1,14 +1,14 @@
 //
-//  Pizza.swift
+//  Pizza2.swift
 //  crea-tu-pizza
 //
-//  Created by Jose Maria Fernandez on 16/9/16.
+//  Created by Jose Maria Fernandez on 27/9/16.
 //  Copyright © 2016 Jose Maria Fernandez. All rights reserved.
 //
 
-import Foundation
+import WatchKit
 
-class Pizza {
+class Pizza2: NSObject {
     
     let tamaños = ["Pequeña","Mediana","Familiar"]
     let masas = ["Fina","Crujiente","Gruesa"]
