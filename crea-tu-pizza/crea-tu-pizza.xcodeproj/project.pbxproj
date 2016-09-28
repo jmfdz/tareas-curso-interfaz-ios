@@ -24,7 +24,11 @@
 		8C22D3371D8B23E00056CC40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C22D3351D8B23E00056CC40 /* Main.storyboard */; };
 		8C22D3391D8B23E00056CC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C22D3381D8B23E00056CC40 /* Assets.xcassets */; };
 		8C22D33C1D8B23E00056CC40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C22D33A1D8B23E00056CC40 /* LaunchScreen.storyboard */; };
+		8C90BE7D1D9C31A90039CB63 /* MasaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90BE7C1D9C31A90039CB63 /* MasaController.swift */; };
 		8C97FABA1D8C81D500BE4FC8 /* PedidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C97FAB91D8C81D500BE4FC8 /* PedidoViewController.swift */; };
+		8CAF81931D9C3B9800B380B3 /* QuesoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF81921D9C3B9800B380B3 /* QuesoController.swift */; };
+		8CAF81951D9C3BB100B380B3 /* IngredientesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF81941D9C3BB100B380B3 /* IngredientesController.swift */; };
+		8CAF81971D9C3BEA00B380B3 /* PedidoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF81961D9C3BEA00B380B3 /* PedidoController.swift */; };
 		8CFF006C1D8C5BF8009B75B1 /* TamañoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF006B1D8C5BF8009B75B1 /* TamañoTableViewController.swift */; };
 		8CFF006E1D8C6A1E009B75B1 /* MasaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF006D1D8C6A1E009B75B1 /* MasaTableViewController.swift */; };
 		8CFF00701D8C6D5A009B75B1 /* QuesoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF006F1D8C6D5A009B75B1 /* QuesoTableViewController.swift */; };
@@ -97,7 +101,11 @@
 		8C22D3381D8B23E00056CC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C22D33B1D8B23E00056CC40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C22D33D1D8B23E00056CC40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C90BE7C1D9C31A90039CB63 /* MasaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasaController.swift; sourceTree = "<group>"; };
 		8C97FAB91D8C81D500BE4FC8 /* PedidoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoViewController.swift; sourceTree = "<group>"; };
+		8CAF81921D9C3B9800B380B3 /* QuesoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesoController.swift; sourceTree = "<group>"; };
+		8CAF81941D9C3BB100B380B3 /* IngredientesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesController.swift; sourceTree = "<group>"; };
+		8CAF81961D9C3BEA00B380B3 /* PedidoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoController.swift; sourceTree = "<group>"; };
 		8CFF006B1D8C5BF8009B75B1 /* TamañoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TamañoTableViewController.swift"; sourceTree = "<group>"; };
 		8CFF006D1D8C6A1E009B75B1 /* MasaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasaTableViewController.swift; sourceTree = "<group>"; };
 		8CFF006F1D8C6D5A009B75B1 /* QuesoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesoTableViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +154,10 @@
 				8C1A79831D9AE62D00DFE327 /* TamanoController.swift */,
 				8C1A79851D9AE98C00DFE327 /* Pizza2.swift */,
 				8C13086F1D9AF40800CD81E0 /* NameRowController.swift */,
+				8C90BE7C1D9C31A90039CB63 /* MasaController.swift */,
+				8CAF81921D9C3B9800B380B3 /* QuesoController.swift */,
+				8CAF81941D9C3BB100B380B3 /* IngredientesController.swift */,
+				8CAF81961D9C3BEA00B380B3 /* PedidoController.swift */,
 			);
 			path = "pizzawatch Extension";
 			sourceTree = "<group>";
@@ -333,11 +345,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAF81951D9C3BB100B380B3 /* IngredientesController.swift in Sources */,
 				8C1A79721D9AE3C900DFE327 /* NotificationController.swift in Sources */,
 				8C1A79861D9AE98C00DFE327 /* Pizza2.swift in Sources */,
 				8C1A79841D9AE62D00DFE327 /* TamanoController.swift in Sources */,
+				8CAF81931D9C3B9800B380B3 /* QuesoController.swift in Sources */,
 				8C1A79741D9AE3C900DFE327 /* ComplicationController.swift in Sources */,
 				8C1A79701D9AE3C900DFE327 /* ExtensionDelegate.swift in Sources */,
+				8CAF81971D9C3BEA00B380B3 /* PedidoController.swift in Sources */,
+				8C90BE7D1D9C31A90039CB63 /* MasaController.swift in Sources */,
 				8C1A796E1D9AE3C900DFE327 /* InterfaceController.swift in Sources */,
 				8C1308701D9AF40800CD81E0 /* NameRowController.swift in Sources */,
 			);

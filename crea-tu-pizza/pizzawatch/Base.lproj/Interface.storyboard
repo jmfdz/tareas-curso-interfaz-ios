@@ -29,7 +29,7 @@
             <objects>
                 <controller id="wT7-0m-dzt" customClass="TamanoController" customModule="pizzawatch_Extension">
                     <items>
-                        <label alignment="left" text="Elige tamaño" id="TY1-NE-Eku"/>
+                        <label alignment="left" text="Tamaño" id="TY1-NE-Eku"/>
                         <separator alignment="left" id="xi8-Fe-wrl"/>
                         <table alignment="left" id="1Xb-4d-jo2">
                             <items>
@@ -45,22 +45,13 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <separator alignment="left" id="ZNo-5E-f0w"/>
-                        <button width="1" alignment="left" title="Siguiente &gt;" id="0hY-FK-CPu"/>
                     </items>
                     <connections>
                         <outlet property="tabla" destination="1Xb-4d-jo2" id="zit-z1-xCV"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="462" y="345"/>
-        </scene>
-        <!--masaController-->
-        <scene sceneID="xbx-QQ-gcH">
-            <objects>
-                <controller identifier="masaController" id="2eB-av-AC9"/>
-            </objects>
-            <point key="canvasLocation" x="700" y="345"/>
+            <point key="canvasLocation" x="454" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -84,6 +75,128 @@
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="pizzawatch" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--masaController-->
+        <scene sceneID="zDC-Qy-m5a">
+            <objects>
+                <controller identifier="masaController" id="u1R-zw-9Nz" customClass="MasaController" customModule="pizzawatch_Extension">
+                    <items>
+                        <label alignment="left" text="Masa" id="d5v-Bs-kuy"/>
+                        <separator alignment="left" id="3bv-DB-tJ4"/>
+                        <table alignment="left" id="gnZ-C6-QDP">
+                            <items>
+                                <tableRow identifier="NameRowControllerIdentifier" id="kuv-3m-wey" customClass="NameRowController" customModule="pizzawatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="G5d-wq-2YB">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="elemento" id="58i-zc-AS6"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="58i-zc-AS6" id="qTf-EM-aTH"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tabla" destination="gnZ-C6-QDP" id="tOC-L4-DeF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="661" y="345"/>
+        </scene>
+        <!--quesoController-->
+        <scene sceneID="7yW-ZH-FeJ">
+            <objects>
+                <controller identifier="quesoController" id="1tW-wm-cI8" customClass="QuesoController" customModule="pizzawatch_Extension">
+                    <items>
+                        <label alignment="left" text="Queso" id="9C4-xv-vck"/>
+                        <separator alignment="left" id="mzj-i7-pax"/>
+                        <table alignment="left" id="Cqh-rG-EbW">
+                            <items>
+                                <tableRow identifier="NameRowControllerIdentifier" id="bIH-gP-dVY" customClass="NameRowController" customModule="pizzawatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="35h-0r-qfh">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="elemento" id="flH-Es-oKZ"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="flH-Es-oKZ" id="CdD-Kn-vC7"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tabla" destination="Cqh-rG-EbW" id="zpg-IS-AZ5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="865" y="345"/>
+        </scene>
+        <!--ingredientesController-->
+        <scene sceneID="q7o-fq-cQz">
+            <objects>
+                <controller identifier="ingredientesController" id="fGn-k2-P26" customClass="IngredientesController" customModule="pizzawatch_Extension">
+                    <items>
+                        <label alignment="left" text="Ingredientes" id="mKq-0I-ZCj"/>
+                        <separator alignment="left" id="Yyq-0B-jVf"/>
+                        <table alignment="left" id="zzR-Pe-Pu5">
+                            <items>
+                                <tableRow identifier="NameRowControllerIdentifier" id="Q1a-qo-goG" customClass="NameRowController" customModule="pizzawatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="aAM-S5-ate">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="elemento" id="eAd-nZ-xo4"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="eAd-nZ-xo4" id="xzw-Iv-RkZ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <separator alignment="left" id="ooK-fS-qt1"/>
+                        <button width="1" alignment="left" title="Siguiente &gt;" id="nsS-fH-CjK">
+                            <connections>
+                                <action selector="pedido" destination="fGn-k2-P26" id="goN-xc-Uph"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="tabla" destination="zzR-Pe-Pu5" id="Zmv-iP-7kM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1068" y="345"/>
+        </scene>
+        <!--pedidoController-->
+        <scene sceneID="bdd-JB-wJD">
+            <objects>
+                <controller identifier="pedidoController" id="XNB-dP-zY0" customClass="PedidoController" customModule="pizzawatch_Extension">
+                    <items>
+                        <label alignment="left" text="Confirmación" id="Vc3-V5-Wa3"/>
+                        <separator alignment="left" id="otX-OH-DxA"/>
+                        <label alignment="left" text="Tamaño" id="sRH-X5-eQm"/>
+                        <separator alignment="left" id="aun-L1-Hjh"/>
+                        <label alignment="left" text="Masa" id="xID-tK-2zy"/>
+                        <label alignment="left" text="Queso" id="sK4-uu-Fwa"/>
+                        <label alignment="left" text="Ingredientes" numberOfLines="3" id="rZ4-A2-oZT"/>
+                        <separator alignment="left" id="V0C-wR-qzt"/>
+                        <button width="1" alignment="left" title="¡Pedir!" id="qnG-aJ-xEt">
+                            <connections>
+                                <action selector="pedir" destination="XNB-dP-zY0" id="0IV-U0-ZLF"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ingredientes" destination="rZ4-A2-oZT" id="y0w-4x-6Es"/>
+                        <outlet property="masa" destination="xID-tK-2zy" id="ppy-12-t15"/>
+                        <outlet property="queso" destination="sK4-uu-Fwa" id="Ee9-2v-NmF"/>
+                        <outlet property="tamaño" destination="sRH-X5-eQm" id="Qhh-hB-Evc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1322" y="345"/>
         </scene>
     </scenes>
 </document>
