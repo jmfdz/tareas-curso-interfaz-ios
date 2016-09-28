@@ -15,6 +15,39 @@ class PedidoController: WKInterfaceController {
     @IBOutlet var queso: WKInterfaceLabel!
     @IBOutlet var masa: WKInterfaceLabel!
     @IBAction func pedir() {
+    
+        var enviar = true
+        
+        if pizza!.tamañoSeleccionado == nil {
+            enviar = false
+        }
+        if pizza!.masaSeleccionada == nil {
+            enviar = false
+        }
+        if pizza!.quesoSeleccionado == nil {
+            enviar = false
+        }
+        
+        if pizza!.ingredientesSeleccionados.count < 1 || pizza!.ingredientesSeleccionados.count > 5 {
+            enviar = false
+        }
+        
+        if enviar {
+            
+            let action1 = WKAlertAction(title: "Aceptar", style: .default, handler:{})
+            
+            presentAlert(withTitle: "Info", message: "Pedido enviado a la cocina con éxito.", preferredStyle: .actionSheet, actions: [action1])
+            
+
+        }else {
+            let action1 = WKAlertAction(title: "Aceptar", style: .default, handler:{})
+            
+            presentAlert(withTitle: "Error", message: "Te falta algún paso, vuelve atrás para completar el pedido.", preferredStyle: .actionSheet, actions: [action1])
+            
+
+            
+        }
+        
     }
     @IBOutlet var tamaño: WKInterfaceLabel!
     

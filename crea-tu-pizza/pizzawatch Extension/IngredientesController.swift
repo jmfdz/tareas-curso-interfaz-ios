@@ -45,7 +45,9 @@ class IngredientesController: WKInterfaceController {
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        pizza!.ingredientesSeleccionados.append( rowIndex )        
+        if !pizza!.ingredientesSeleccionados.contains(rowIndex) {
+            pizza!.ingredientesSeleccionados.append( rowIndex )
+        }
    }
 
 }

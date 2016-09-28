@@ -139,7 +139,7 @@
             <objects>
                 <controller identifier="ingredientesController" id="fGn-k2-P26" customClass="IngredientesController" customModule="pizzawatch_Extension">
                     <items>
-                        <label alignment="left" text="Ingredientes" id="mKq-0I-ZCj"/>
+                        <label width="136" height="19" alignment="left" text="Ingredientes" id="7lK-Nj-QuE"/>
                         <separator alignment="left" id="Yyq-0B-jVf"/>
                         <table alignment="left" id="zzR-Pe-Pu5">
                             <items>
@@ -155,8 +155,8 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <separator alignment="left" id="ooK-fS-qt1"/>
-                        <button width="1" alignment="left" title="Siguiente &gt;" id="nsS-fH-CjK">
+                        <button width="1" alignment="right" verticalAlignment="center" title="Siguiente" id="nsS-fH-CjK">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="pedido" destination="fGn-k2-P26" id="goN-xc-Uph"/>
                             </connections>
